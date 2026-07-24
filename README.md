@@ -1,13 +1,11 @@
 # Nesto Loyalty System
 
-Nesto is one of the largest supermarket chains in Sri Lanka. This is a small API-based loyalty system that allows customers to register, activate their account, log in, earn loyalty points, and track their accumulated points.
-
 ## Setup Instructions
 
 ### Prerequisites
 - PHP >= 8.1
 - Composer
-- MySQL or SQLite (Database)
+- MySQL (Database)
 
 ### Installation
 
