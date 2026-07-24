@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens; // REQUIRED FOR API LOGIN
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable; // Added HasApiTokens here
 
     /**
      * The attributes that are mass assignable.
@@ -20,8 +18,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'nic',
+        'mobile',
         'password',
+        'is_active',
+        'points_balance',
     ];
 
     /**
@@ -42,8 +43,16 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_active' => 'boolean',
         ];
+    }
+
+    /**
+     * Relationship: A User has many Orders.
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
