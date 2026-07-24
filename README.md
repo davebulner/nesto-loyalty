@@ -12,13 +12,13 @@ Nesto is one of the largest supermarket chains in Sri Lanka. This is a small API
 ### Installation
 
 1. **Clone the repository** (if not already done):
-   ```bash
+   ```cmd
    git clone https://github.com/davebulner/nesto-loyalty.git
    cd nesto-loyalty
    ```
 
 2. **Install Composer dependencies:**
-   ```bash
+   ```cmd
    composer install
    ```
 
@@ -26,17 +26,17 @@ Nesto is one of the largest supermarket chains in Sri Lanka. This is a small API
    .env file is included in the project for easier testing access
 
 4. **Generate the application key:**
-   ```bash
+   ```cmd
    php artisan key:generate
    ```
 
 5. **Run the database migrations:**
-   ```bash
+   ```cmd
    php artisan migrate
    ```
 
 6. **Start the local development server:**
-   ```bash
+   ```cmd
    php artisan serve
    ```
    The API will be available at `http://localhost:8000`.
