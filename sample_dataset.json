@@ -1,0 +1,45 @@
+{
+  "customers": [
+    {
+      "nic": "901234567V",
+      "mobile": "0771234567",
+      "name": "John Doe",
+      "password": "password123",
+      "is_active": true,
+      "points_balance": 155
+    },
+    {
+      "nic": "881234567V",
+      "mobile": "0712345678",
+      "name": "Jane Smith",
+      "password": "password123",
+      "is_active": true,
+      "points_balance": 0
+    },
+    {
+      "nic": "951234567V",
+      "mobile": "0751234567",
+      "name": "Kamal Perera",
+      "is_active": false,
+      "points_balance": 0
+    }
+  ],
+  "orders": [
+    {
+      "invoice_number": "INV-10001",
+      "transaction_date": "2023-10-01",
+      "branch": "Colombo",
+      "amount": 15500,
+      "points_earned": 155,
+      "user_nic": "901234567V"
+    },
+    {
+      "invoice_number": "INV-10002",
+      "transaction_date": "2023-10-02",
+      "branch": "Kandy",
+      "amount": 5000,
+      "points_earned": 0,
+      "user_nic": "881234567V"
+    }
+  ]
+}
